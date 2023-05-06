@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainController">
+    <children>
+        <Button fx:id="clickAddPart" layoutX="23.0" layoutY="354.0" mnemonicParsing="false" onAction="#MVAddParts" text="Add" />
+        <TableView fx:id="MVPartsTable" layoutX="11.0" layoutY="41.0" prefHeight="300.0" prefWidth="380.0">
+            <columns>
+                <TableColumn fx:id="partIDColumn" prefWidth="95.0" text="ID" />
+                <TableColumn fx:id="partNameColumn" prefWidth="95.0" text="Name" />
+                <TableColumn fx:id="partInventoryColumn" prefWidth="95.0" text="Stock " />
+                <TableColumn fx:id="partPriceColumn" prefWidth="95.0" text="Price" />
+            </columns>
+        </TableView>
+        <Label layoutX="47.0" layoutY="14.0" text="PART">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Label>
+        <Button fx:id="clickModifyPart" layoutX="89.0" layoutY="354.0" mnemonicParsing="false" onAction="#MVModifyPart" text="Modify" />
+        <Button fx:id="clickDelete" layoutX="160.0" layoutY="354.0" mnemonicParsing="false" onAction="#MVDeletePart" text="Delete" />
+        <TextField fx:id="searchPart" layoutX="211.0" layoutY="15.0" onAction="#MVSearchPart" promptText="Search by Name or ID" />
+        <AnchorPane layoutX="400.0" layoutY="15.0" prefHeight="370.0" prefWidth="370.0">
+            <children>
+                <TableView fx:id="MVProductTable" layoutX="7.0" layoutY="24.0" prefHeight="300.0" prefWidth="340.0">
+                    <columns>
+                        <TableColumn fx:id="productIDColumn" prefWidth="75.0" text="ID" />
+                        <TableColumn fx:id="productNameColumn" prefWidth="109.0" text="Name" />
+                        <TableColumn fx:id="producktInventoryColumn" prefWidth="85.0" text="Stock" />
+                        <TableColumn fx:id="productPriceColumn" prefWidth="70.0" text="Price " />
+                    </columns>
+                </TableView>
+                <Label layoutX="47.0" text="PRODUCTS">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </Label>
+                <Button fx:id="clickAddProduct" layoutX="14.0" layoutY="331.0" mnemonicParsing="false" onAction="#MVAddProduct" text="Add" />
+                <Button fx:id="clickModifyProduct" layoutX="66.0" layoutY="331.0" mnemonicParsing="false" onAction="#MVModifyProduct" text="Modify" />
+                <Button fx:id="clickDeleteProduct" layoutX="137.0" layoutY="331.0" mnemonicParsing="false" onAction="#MVDeleteProduct" text="Delete" />
+                <TextField fx:id="SearchProduct" layoutX="188.0" layoutY="1.0" onAction="#MVSearchProduct" promptText="Search by Name or ID" />
+                <Button fx:id="MVExitButton" layoutX="295.0" layoutY="331.0" mnemonicParsing="false" onAction="#MainExitButton" text="Exit" />
+            </children></AnchorPane>
+    </children>
+</AnchorPane>
